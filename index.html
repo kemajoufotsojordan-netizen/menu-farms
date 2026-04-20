@@ -9,175 +9,278 @@
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #0a0f2c, #000);
+    background: radial-gradient(circle at top, #0a0a0a, #000);
     color:white;
 }
 
-/* LOGO ANIMÉ */
+/* HEADER */
 header{
     text-align:center;
-    padding:25px;
-    font-size:30px;
+    padding:30px;
+    font-size:32px;
     font-weight:bold;
-    background: linear-gradient(90deg,#00d4ff,red,#00d4ff);
-    background-size:200%;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    animation: shine 4s linear infinite;
+    letter-spacing:3px;
+    color:gold;
+    text-shadow:0 0 15px gold;
 }
 
-@keyframes shine{
-    0%{background-position:0%;}
-    100%{background-position:200%;}
+/* SLIDER */
+.slider{
+    position:relative;
+    width:100%;
+    height:250px;
+    overflow:hidden;
 }
 
-.container{ padding:20px; }
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:1s;
+}
 
-/* CARDS */
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.active{
+    opacity:1;
+}
+
+/* CONTAINER */
+.container{
+    padding:20px;
+}
+
+/* CARD */
 .card{
     background: rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
     margin-bottom:20px;
     padding:20px;
     border-radius:20px;
-    box-shadow:0 0 15px rgba(0,212,255,0.2);
+    border:1px solid rgba(255,255,255,0.1);
     transition:0.4s;
-    transform: translateY(30px);
-    opacity:0;
-}
-
-.card.show{
-    transform: translateY(0);
-    opacity:1;
 }
 
 .card:hover{
-    transform: scale(1.03);
-    box-shadow:0 0 25px red;
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,215,0,0.3);
 }
 
 .title{
     font-size:20px;
     margin-bottom:10px;
-    color:#00d4ff;
+    color:gold;
 }
 
-/* BOUTONS */
+/* BUTTON */
 .btn{
     display:block;
     text-align:center;
-    margin:15px auto;
+    margin:20px 0;
     padding:15px;
-    width:90%;
-    border-radius:50px;
+    border-radius:30px;
     text-decoration:none;
     color:white;
     font-weight:bold;
 }
 
-.whatsapp{ background: linear-gradient(90deg,#25D366,#00ff99); }
-.telegram{ background: linear-gradient(90deg,#0088cc,#00d4ff); }
+.telegram{
+    background:#0088cc;
+}
 
-/* FOOTER */
+/* FLOAT WHATSAPP */
+.float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
+}
+
 footer{
     text-align:center;
     padding:20px;
-    font-size:16px;
-    opacity:0.8;
+    opacity:0.7;
 }
 </style>
 </head>
 
 <body>
 
-<header>🔥 MENU FARMS 🔥</header>
+<header>
+🔥 MENU FARMS 🔥
+</header>
+
+<!-- SLIDER PHOTOS -->
+<div class="slider">
+    <div class="slide active"><img src="images/photo1.jpg"></div>
+    <div class="slide"><img src="images/photo2.jpg"></div>
+    <div class="slide"><img src="images/photo3.jpg"></div>
+</div>
 
 <div class="container">
 
-<div class="card"><div class="title">🚚 SHIP TRANSPORTEUR AU CHOIX</div></div>
-
-<div class="card"><div class="title">👷‍♂️ TOP SEMY DRY 👷‍♂️</div>
-100G / 1500€ <br>5 KILO / 11000€ <br>10 KILO / 20000€ <br>20 KILO / 39000€
-</div>
-
-<div class="card"><div class="title">🏔️ IN THE WEST 2025 & 2026</div>
-45 U PREMIUM <br><br>
-STRAIN 🧬<br>
-- MELON 🍉 <br>- PAPAYA DRIP 🍐 <br>- GELATO 🍑 <br>- ZKITTLEZ 🍭 <br><br>
-100G / 250€ <br>1 KILO / 2800€ <br>5 KILO / 12000€ <br>10 KILO / 22500€
-</div>
-
-<div class="card"><div class="title">🧊 FROZEN SIFT</div>
-STRAIN 🧬<br>
-- CHERRY DIESEL 🍒 <br>- ORANGE SHERBET 🍊 <br>- STRAWBERRY BANANA 🍌 <br>- CREAM FUEL 🧄 <br>- CHEESE X COLADA 🧀 <br><br>
-100G / 1000€ <br>500G / 3000€ <br>1 KG / 5900€ <br>5 KG / 25000€
-</div>
-
-<div class="card"><div class="title">NEW 2026 - 105 U PREMIUM</div>
-STRAIN 🧬<br>
-- TANGERINE DREAM <br>- WATERMELON CANDY <br>- ZILLIONS <br>- FRUIT SPIRIT <br>- WEDDING GELATO <br>- TEOPICAL <br>- COOKIES DREM <br><br>
-100G / 500€ <br>500G / 1900€ <br>1 KILO / 3600€ <br>5 KILO / 16000€ <br>10 KILO / 30000€
-</div>
-
-<div class="card"><div class="title">NEW 2026 - FROZEN SIFT</div>
-STRAIN 🧬<br>
-- APPLE YUZU 🍬 <br>- FORBIDDEN 🍇 <br>- TANGERINE SQUEZZE 🍊 <br>- STUDIO CHERRY 🍒 <br><br>
-100G / 700€ <br>500G / 3300€ <br>1 KILO / 6500€ <br>5 KILO / 26000€ <br>10 KILO / 50000€
-</div>
-
-<div class="card"><div class="title">🏔️ NUHA FARM - ICE O LATOR</div>
-STRAIN 🧬<br>
-- HEDBENG SLWRRICANE 🫐 <br>- BLACK DOMINA ⬛️ <br>- SUNSET SHERBET 🥵 <br>- LEMON CLEAN 🍋 <br>- LONDON POUND CAKE 🎂 <br>- BANANA PUNCH 🍌 <br>- DOSIDOS 🍑 <br><br>
-50G / 1600€ <br>100G / 3000€ <br>200G / 5500€ <br>MORE PRIVATE 💻
-</div>
-
-<div class="card"><div class="title">DOUBLE COLORS</div>
-STRAIN 🧬<br>
-- FORBIDEN SWEET ROOKS 🍇 <br>- HASHBURGER GAK 🍔 <br>- MACEDONIA LIME 🍋‍🟩 <br>- YELLOW MELON 🍈 <br>- KAMARA RUNTZ 🧄 <br>- RUBY VIOLET 😈 <br><br>
-50G / 2000€ <br>100G / 3800€ <br>200G / 7000€
-</div>
-
-<div class="card"><div class="title">🏔️ WILLY WONKA - BEAT AND SIFT</div>
-500G / 4000€ <br>1 KG / 7500€
-</div>
-
-<div class="card"><div class="title">🏔️ HASH WORLD</div>
-❄️ FROZEN SIFT ❄️<br>
-100G / 400€ <br>500G / 2500€ <br>1 KG / 4800€ <br><br>
-⚡️ STATIC SIFT ⚡️<br>
-500G / 4000€ <br>1 KG / 7500€
-</div>
-
-<!-- AJOUT DEMANDÉ -->
 <div class="card">
-<div class="title">PIATELLA 🔥 COLOMBIENNE ❄️</div>
+<div class="title">🚚 SHIP TRANSPORTEUR AU CHOIX</div>
 </div>
 
-<!-- BOUTONS -->
-<a class="btn whatsapp" href="https://wa.me/16615641919" target="_blank">
-📲 Commander sur WhatsApp
-</a>
+<div class="card">
+<div class="title">👷‍♂️ TOP SEMY DRY 👷‍♂️</div>
+100G / 1500€ <br>
+5 KILO / 11000€ <br>
+10 KILO / 20000€ <br>
+20 KILO / 39000€
+</div>
+
+<div class="card">
+<div class="title">🏔️ IN THE WEST 2025 & 2026</div>
+STRAIN 🧬<br>
+- MELON 🍉 <br>
+- PAPAYA DRIP 🍐 <br>
+- GELATO 🍑 <br>
+- ZKITTLEZ 🍭 <br><br>
+
+100G / 250€ <br>
+1 KILO / 2800€ <br>
+5 KILO / 12000€ <br>
+10 KILO / 22500€
+</div>
+
+<div class="card">
+<div class="title">🧊 FROZEN SIFT</div>
+STRAIN 🧬<br>
+- CHERRY DIESEL 🍒 <br>
+- ORANGE SHERBET 🍊 <br>
+- STRAWBERRY BANANA 🍌 <br>
+- CREAM FUEL 🧄 <br>
+- CHEESE X COLADA 🧀 <br><br>
+
+100G / 1000€ <br>
+500G / 3000€ <br>
+1 KG / 5900€ <br>
+5 KG / 25000€
+</div>
+
+<div class="card">
+<div class="title">NEW 2026 - 105 U PREMIUM</div>
+STRAIN 🧬<br>
+- TANGERINE DREAM <br>
+- WATERMELON CANDY <br>
+- ZILLIONS <br>
+- FRUIT SPIRIT <br>
+- WEDDING GELATO <br>
+- TEOPICAL <br>
+- COOKIES DREM <br><br>
+
+100G / 500€ <br>
+500G / 1900€ <br>
+1 KILO / 3600€ <br>
+5 KILO / 16000€ <br>
+10 KILO / 30000€
+</div>
+
+<div class="card">
+<div class="title">NEW 2026 - FROZEN SIFT</div>
+STRAIN 🧬<br>
+- APPLE YUZU 🍬 <br>
+- FORBIDDEN 🍇 <br>
+- TANGERINE SQUEZZE 🍊 <br>
+- STUDIO CHERRY 🍒 <br><br>
+
+100G / 700€ <br>
+500G / 3300€ <br>
+1 KILO / 6500€ <br>
+5 KILO / 26000€ <br>
+10 KILO / 50000€
+</div>
+
+<div class="card">
+<div class="title">🏔️ NUHA FARM - ICE O LATOR</div>
+STRAIN 🧬<br>
+- HEDBENG SLWRRICANE 🫐 <br>
+- BLACK DOMINA ⬛️ <br>
+- SUNSET SHERBET 🥵 <br>
+- LEMON CLEAN 🍋 <br>
+- LONDON POUND CAKE 🎂 <br>
+- BANANA PUNCH 🍌 <br>
+- DOSIDOS 🍑 <br><br>
+
+50G / 1600€ <br>
+100G / 3000€ <br>
+200G / 5500€ <br>
+MORE PRIVATE 💻
+</div>
+
+<div class="card">
+<div class="title">DOUBLE COLORS</div>
+STRAIN 🧬<br>
+- FORBIDEN SWEET ROOKS 🍇 <br>
+- HASHBURGER GAK 🍔 <br>
+- MACEDONIA LIME 🍋‍🟩 <br>
+- YELLOW MELON 🍈 <br>
+- KAMARA RUNTZ 🧄 <br>
+- RUBY VIOLET 😈 <br><br>
+
+50G / 2000€ <br>
+100G / 3800€ <br>
+200G / 7000€
+</div>
+
+<div class="card">
+<div class="title">🏔️ WILLY WONKA - BEAT AND SIFT</div>
+500G / 4000€ <br>
+1 KG / 7500€
+</div>
+
+<div class="card">
+<div class="title">🏔️ HASH WORLD</div>
+❄️ FROZEN SIFT ❄️<br>
+100G / 400€ <br>
+500G / 2500€ <br>
+1 KG / 4800€ <br><br>
+
+⚡️ STATIC SIFT ⚡️<br>
+500G / 4000€ <br>
+1 KG / 7500€
+</div>
+
+<div class="card">
+<div class="title">🔥 PIATELLA COLOMBIENNE ❄️</div>
+Disponible sur demande 💬
+</div>
 
 <a class="btn telegram" href="https://t.me/calitefarmz2026" target="_blank">
-🚀 Commander sur Telegram
+📩 COMMANDER SUR TELEGRAM
 </a>
 
 </div>
 
 <footer>
-💰 PAIEMENT BITCOIN ACCEPTÉ
+💰 PAIEMENT BITCOIN ACCEPTÉ 💰 <br>
+© 2026 MENU FARMS
 </footer>
 
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/16615641919" class="float" target="_blank">💬</a>
+
 <script>
-const cards = document.querySelectorAll('.card');
-window.addEventListener('scroll', () => {
-  cards.forEach(card => {
-    if(card.getBoundingClientRect().top < window.innerHeight - 100){
-      card.classList.add('show');
-    }
-  });
-});
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}, 3000);
 </script>
 
 </body>
